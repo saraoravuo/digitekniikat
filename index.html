@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>The Ravintola</title>
+</head>
+<body>
+  <!--Navbar-->
+    <nav class="navbar sticky-top navbar-expand-sm bg-light navbar-light">
+        <div class="container-xxl">
+          <a class="navbar-brand" href="index.html">
+            <span class="fw-bold">The restaurant</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!--Navbar links-->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Etusivu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ravintola.html">Ravintola</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="yhteystiedot.html">Ota yhteyttä</a>
+              </li>  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="menu.html" role="button" data-bs-toggle="dropdown">Menu</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="menu.html">Lounas</a></li>
+                  <li><a class="dropdown-item" href="menu.html">A la carte</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active c-item">
+      <img src="assets/breakfast.jpg" alt="breakfast" class="d-block c-img" style="width:100%">
+      <div class="carousel-caption">
+        <h3 class="display-2">Antoisa aamupala</h3>
+        <p>Päivän tärkein ateria!</p>
+      </div>
+    </div>
+    <div class="carousel-item c-item">
+      <img src="assets/dessert.jpg" alt="dessert" class="d-block c-img" style="width:100%">
+      <div class="carousel-caption">
+        <h3 class="display-2">Jälkiruoka</h3>
+        <p>Jälkiruoka mahtuu aina!</p>
+      </div> 
+    </div>
+    <div class="carousel-item c-item">
+      <img src="assets/meal.jpg" alt="meal" class="d-block c-img" style="width:100%">
+      <div class="carousel-caption">
+        <h3 class="display-2">Pääruoka</h3>
+        <p>Syödään hyvin!</p>
+      </div>  
+    </div>
+    <div class="carousel-item c-item">
+      <img src="assets/drinks.jpg" alt="drinks" class="d-block c-img" style="width:100%">
+      <div class="carousel-caption">
+        <h3 class="display-2">Juomat</h3>
+        <p>Kulauta alas!</p>
+      </div> 
+    </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
