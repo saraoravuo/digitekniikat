@@ -23,32 +23,32 @@
             })
             
         function kerro(data) {
-        var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
-
-        // otsikkotiedon hakeminen ja sijoittaminen
-        teksti = "<h1>" + data.otsikko + "</h1>";
-        teksti = teksti + "<p>" + data.kuvaus + "</p>";
-        teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
-        teksti = teksti + "<h3>Opintojakso: " + data.opintojakso.nimi + "</h3>";
-        teksti = teksti + "<h3>Tunnus: " + data.opintojakso.tunnus + "</h3>";
-        teksti = teksti + "<h3>Opintopisteet: " + data.opintojakso.opintopisteet + "</h3>";
-        teksti = teksti + "<ul>"
-
-        for(var i = 0; i < data.sisältö.length; i++) {
-            teksti = teksti + "<li>" + data.sisältö[i] + "</li>";
-        }
-        teksti = teksti + "</ul>"
-
-        for(var i = 0; i < data.tekniikat.length; i++) {
-            teksti = teksti + "<li><a href='" + data.tekniikat[i].linkki + "'>" + data.tekniikat[i].aihe + "</a></li>";
-        }
-        teksti = teksti + "</ul>"
-
-        // tähän tulee muiden tietojen käsittely kohta
-
-        // teksti-muuttujan sisällön tulostus
-        document.getElementById("vastaus").innerHTML = teksti;
-}
+            var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
+    
+            // otsikkotiedon hakeminen ja sijoittaminen
+            teksti = "<h1>" + data.otsikko + "</h1>";
+            teksti = teksti + "<p>" + data.kuvaus + "</p>";
+            teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
+            teksti = teksti + "<h3>Opintojakso: " + data.opintojakso.nimi + "</h3>";
+            teksti = teksti + "<h3>Tunnus: " + data.opintojakso.tunnus + "</h3>";
+            teksti = teksti + "<h3>Opintopisteet: " + data.opintojakso.opintopisteet + "</h3>";
+            teksti = teksti + "<ul>"
+    
+            for(var i = 0; i < data.sisältö.length; i++) {
+                teksti = teksti + "<li>" + data.sisältö[i] + "</li>";
+            }
+            teksti = teksti + "</ul>"
+    
+            for(var i = 0; i < data.tekniikat.length; i++) {
+                teksti = teksti + "<li><a href='" + data.tekniikat[i].linkki + "'>" + data.tekniikat[i].aihe + "</a></li>";
+            }
+            teksti = teksti + "</ul>"
+    
+            // tähän tulee muiden tietojen käsittely kohta
+    
+            // teksti-muuttujan sisällön tulostus
+            document.getElementById("vastaus").innerHTML = teksti;
+      }  
     </script>
 </body>
 </html>
