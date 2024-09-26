@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>JSON Example</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="vastaus"></div>
+    <script>
+        fetch('https://run.mocky.io/v3/b3b1c88b-a189-4204-9bb9-65cc4237974b')
+        .then(function (response) { 
+            return response.json();
+        })
+       
+        .then(function (responseJson) {
+            kerro(responseJson[0]) 
+        })
+   
+        .catch(function (error) { 
+            document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+            })
+
+        function kerro(data) {
+            var teksti = "";
+
+            teksti = "<h1>" + data.toteutus + "</h1>";
+            teksti = teksti + "<p>Oppilaiden lukumäärä toteutuksella on " + data.oppilaidenLkm + "</p>";
+            teksti = teksti + "Osallistujien nimet ovat: ";
+
+            for(var i = 0; i < data.osallisujienNimet.length; i++) {
+            teksti = teksti + "<li>" + data.osallisujienNimet[i] + "</li>";
+            }
+
+            teksti = teksti + "</ul>"
+
+            teksti = teksti + "<p>Toteutus " + data.toteutus + " on alkanut " + data.alkamisaika + "ssa, ja se loppuu " + data.loppumisaika + "ssa.</p>"
+            teksti = teksti + "Toteutus kestää yhteensä " + data.kesto + ".";
+            teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
+
+            document.getElementById("vastaus").innerHTML = teksti;
+        }
+    </script>
+</body>
+</html>
