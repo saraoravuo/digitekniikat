@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>JSON Example</title>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id ="vastaus"></div>
+    <script>
+        fetch('https://tie.digitraffic.fi/api/weathercam/v1/stations/C04507/data')
+        // Muunnetaan vastaus JSON-muotoon
+        .then(function (response) { 
+            return response.json();
+        })
+       
+        // Käsitellään muunnettu (eli JSON-muotoinen) vastaus
+        .then(function (responseJson) {
+            liikennekamera(responseJson) 
+
+            console.log(responseJson)
+        })
+        // Jos tuli jokin virhe
+        .catch(function (error) { 
+            document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+        })
+
+        function liikennekamera(data) {
+            var teksti = "";
+
+            teksti = "<h1>Autolla Tampereelle</h1>"
+
+            for (var i = 0; i < data.presets.length; i++) {
+                teksti = teksti + "<h3>" + data.presets[i] + "</h3>"; // EN SAA TOIMIMAAN NIIN, ETTÄ SIVULLA NÄKYISIVÄT KUVAT
+            }
+
+            document.getElementById("vastaus").innerHTML = teksti;
+        }
+
+    </script>
+</body>
